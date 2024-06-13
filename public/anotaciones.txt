@@ -1,0 +1,19 @@
+INSTALACION
+pipenv install
+cp .env.example .env
+
+--------------------
+npm install
+npm run start
+npx create-next-app@latest --typescript --tailwind --eslint
+
+
+
+
+
+
+
+---------
+INICIAR 
+pipenv install
+npm run start
