@@ -1,15 +1,16 @@
-// carrusel.jsx
+
 import React from 'react';
 import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
+import logo1 from  "../../img/logo1.png";
+import logo2 from  "../../img/logo2.webp";
+import logo3 from  "../../img/logo3.png";
 
 const logos = [
-  "logo1.png",
-  "logo2.png",
-  "logo3.png",
-  "logo4.png",
-  "logo5.png"
+  logo1,
+  logo2,
+  logo3
 ];
 
 const LogoCarousel = () => {
