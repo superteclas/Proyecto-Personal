@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css"; 
@@ -15,13 +14,14 @@ const logos = [
 
 const LogoCarousel = () => {
   const settings = {
-    dots: true,
+    dots: false, // Disable dots for a continuous look
     infinite: true,
-    speed: 500,
+    speed: 3000,
     slidesToShow: 3,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 2000,
+    autoplaySpeed: 0, // Continuous scrolling
+    cssEase: 'linear', // Smooth linear transition
     responsive: [
       {
         breakpoint: 1024,
@@ -29,7 +29,7 @@ const LogoCarousel = () => {
           slidesToShow: 3,
           slidesToScroll: 1,
           infinite: true,
-          dots: true
+          dots: false
         }
       },
       {
@@ -37,23 +37,27 @@ const LogoCarousel = () => {
         settings: {
           slidesToShow: 2,
           slidesToScroll: 1,
-          initialSlide: 2
+          infinite: true
         }
       },
       {
         breakpoint: 480,
         settings: {
           slidesToShow: 1,
-          slidesToScroll: 1
+          slidesToScroll: 1,
+          infinite: true
         }
       }
     ]
   };
 
+  // Duplicate the logos array to create a continuous loop effect
+  const duplicatedLogos = [...logos, ...logos];
+
   return (
     <div style={{ width: "80%", margin: "0 auto" }}>
       <Slider {...settings}>
-        {logos.map((logo, index) => (
+        {duplicatedLogos.map((logo, index) => (
           <div key={index}>
             <img src={logo} alt={`logo-${index}`} style={{ width: '100%', height: 'auto' }} />
           </div>
