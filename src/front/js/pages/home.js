@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import { Context } from "../store/appContext";
 import imagenhome from "../../img/alvaroponce.png";
 import "../../styles/home.css";
+import LogoCarousel from "../component/carrusel.jsx"; 
 
 export const Home = () => {
 	const { store, actions } = useContext(Context);
@@ -10,7 +11,7 @@ export const Home = () => {
 		<div className="text-center mt-5">
 			<h1>Hello Imagen!!</h1>
 			<p className="imagen-home">
-				<img src={imagenhome} />
+				<img src={imagenhome} alt="home" />
 			</p>
 			<div className="alert alert-info">
 				{store.message || "Loading message from the backend (make sure your python backend is running)..."}
@@ -21,6 +22,9 @@ export const Home = () => {
 					Read documentation
 				</a>
 			</p>
+			<div>
+				<LogoCarousel /> 
+			</div>
 		</div>
 	);
 };
