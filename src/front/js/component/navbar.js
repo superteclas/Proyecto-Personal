@@ -7,7 +7,7 @@ export const Navbar = () => {
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <div className="container">
         <Link to="/" className="navbar-brand">
-          <img src={logo} alt="Logo" style={{ maxHeight: "40px" }} /> 
+          <img src={logo} alt="Logo" style={{ maxHeight: "60px" }} /> 
         </Link>
         <button
           className="navbar-toggler"
@@ -49,11 +49,7 @@ export const Navbar = () => {
             </li>
           </ul>
         </div>
-        <div className="ml-auto">
-          <Link to="/demo" className="btn btn-primary">
-            Proyecto Empezado
-          </Link>
-        </div>
+        
       </div>
     </nav>
   );
