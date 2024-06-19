@@ -14,14 +14,14 @@ const logos = [
 
 const LogoCarousel = () => {
   const settings = {
-    dots: false, // Disable dots for a continuous look
+    dots: false, 
     infinite: true,
     speed: 3000,
     slidesToShow: 3,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 0, // Continuous scrolling
-    cssEase: 'linear', // Smooth linear transition
+    autoplaySpeed: 0, 
+    cssEase: 'linear', 
     responsive: [
       {
         breakpoint: 1024,

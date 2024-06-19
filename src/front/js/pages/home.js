@@ -3,6 +3,7 @@ import { Context } from "../store/appContext";
 import imagenhome from "../../img/alvaroponce.png";
 import "../../styles/home.css";
 import LogoCarousel from "../component/carrusel.jsx"; 
+import SubscriptionForm from "../component/suscribe.jsx";  // Cambiar a mayúscula
 
 export const Home = () => {
 	const { store, actions } = useContext(Context);
@@ -18,11 +19,11 @@ export const Home = () => {
 			</div>
 			
 			<div>
-			<h3>
-				Empresas para las que he trabajado:{" "}
-				
-			</h3>
+				<h3>Empresas para las que he trabajado:{" "}</h3>
 				<LogoCarousel /> 
+			</div>
+			<div>
+				<SubscriptionForm/>  {/* Cambiar a mayúscula */}
 			</div>
 		</div>
 	);
