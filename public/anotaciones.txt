@@ -20,3 +20,14 @@ npm install next/link
 INICIAR 
 pipenv install
 npm run start
+
+
+
+@api.route('/hello', methods=['POST', 'GET'])
+def handle_hello():
+
+    response_body = {
+        "message": "EL BACKEND FUNCIONA"
+    }
+
+    return jsonify(response_body), 200

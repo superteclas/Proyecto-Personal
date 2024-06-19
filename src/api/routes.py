@@ -20,3 +20,10 @@ def handle_hello():
     }
 
     return jsonify(response_body), 200
+
+
+@api.route('/email', methods=['POST'])
+def get_emails():
+    users = User.query.all()
+    emails = [user.email for user in users]
+    return jsonify(emails), 200
