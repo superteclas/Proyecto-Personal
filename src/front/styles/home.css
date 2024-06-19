@@ -1,11 +1,21 @@
-/*
-    home.css: This website contains selectors only used in home.css
+.imagen-home {
+    width: 100%; /* Asegura que el contenedor ocupe todo el ancho de la página */
+    text-align: center; /* Centra la imagen si el contenedor tiene más ancho que la imagen */
+   
+    background: linear-gradient(to bottom, rgba(255,255,255,0.1), rgba(255,255,255,0.1)); /* Fondo sutil */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra alrededor del contenedor */
+}
 
-    All pages share the styles on index.css but you should create 
-    one more css for each page that will contain the selected used 
-    on that page only (the ones not reused in other pages).
-*/
 .imagen-home img {
-max-width: 100%;
+    max-width: 100%;
+    width: 100%; /* Asegura que la imagen ocupe todo el ancho del contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+    border-radius: 10px; /* Bordes redondeados */
+    transition: transform 0.3s ease, filter 0.3s ease; /* Transición suave */
+}
 
+.imagen-home img:hover {
+    
+    filter: brightness(1.1); /* Aumentar brillo al pasar el cursor */
 }
