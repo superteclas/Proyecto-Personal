@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { Context } from "../store/appContext";
-import imagenhome from "../../img/alvaroponce.png";
+import imagenhome from "../../img/FOTOTECLADO.jpg";
 import "../../styles/home.css";
 import LogoCarousel from "../component/carrusel.jsx"; 
 import SubscriptionForm from "../component/suscribe.jsx";  // Cambiar a mayúscula

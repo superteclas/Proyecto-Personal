@@ -6,6 +6,6 @@
     on that page only (the ones not reused in other pages).
 */
 .imagen-home img {
-max-width: 25%;
+max-width: 100%;
 
 }
