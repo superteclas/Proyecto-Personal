@@ -22,8 +22,9 @@ def handle_hello():
     return jsonify(response_body), 200
 
 
-@api.route('/email', methods=['POST'])
-def get_emails():
+@api.route('/users', methods=['GET'])
+def get_users():
     users = User.query.all()
-    emails = [user.email for user in users]
-    return jsonify(emails), 200
+    serialized_users = [user.serialize() for user in users]
+    return jsonify(serialized_users), 200
+
