@@ -1,5 +1,5 @@
 """
-This module takes care of starting the API Server, Loading the DB and Adding the endpoints
+This module takes care of starting the API Server, Loading the DBBBBBBBBBBBB and Adding the endpoints
 """
 from flask import Flask, request, jsonify, url_for, Blueprint
 from api.models import db, User
