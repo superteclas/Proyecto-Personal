@@ -23,6 +23,11 @@ Backend
     Migrar base de datos: pipenv run migrate y pipenv run upgrade
     Ejecutar la aplicación: pipenv run start
 
+    Backend Populate Table Users
+To insert test users in the database execute the following command:
+
+$ flask insert-test-users 5
+
 Frontend
 
     Instalar paquetes: npm install
