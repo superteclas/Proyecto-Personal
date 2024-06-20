@@ -1,12 +1,17 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
+import { Context } from '../store/appContext';
 import "../../styles/suscribe.css"; 
 
 const Subscribe = () => {
+    const { actions } = useContext(Context);
     const [email, setEmail] = useState('');
 
-    const handleSubmit = () => {
+    const handleSubmit = async () => {
         console.log('Email submitted:', email);
-        // Aquí puedes agregar la lógica para enviar el email al backend
+        if (email) {
+            await actions.addUser(email);
+            setEmail('');  
+        }
     };
 
     return (
