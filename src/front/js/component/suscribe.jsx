@@ -16,7 +16,7 @@ const Subscribe = () => {
 
     return (
         <div className="titulo_subs">
-            <h1><HOLAAA></HOLAAA></h1>
+            <h1>HOLAAAA</h1>
         <div className="subscribe">
             <p>SUBSCRIBE</p>
             <input 
