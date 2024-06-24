@@ -1,13 +1,14 @@
 import React, { useState, useContext } from 'react';
 import { Context } from '../store/appContext';
 import "../../styles/suscribe.css"; 
+import Swal from 'sweetalert2'
 
 const Subscribe = () => {
     const { actions } = useContext(Context);
     const [email, setEmail] = useState('');
 
     const handleSubmit = async () => {
-        console.log('Email submitted:', email);
+        alert('Email submitted:', email);
         if (email) {
             await actions.addUser(email);
             setEmail('');  
