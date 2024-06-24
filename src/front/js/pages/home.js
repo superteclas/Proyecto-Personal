@@ -22,7 +22,7 @@ export const Home = () => {
 				<LogoCarousel /> 
 			</div>
 			<div>
-				<SubscriptionForm/>  {/* Cambiar a mayúscula */}
+				<SubscriptionForm/> 
 			</div>
 		</div>
 	);
