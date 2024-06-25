@@ -57,7 +57,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					// Check if the email already exists
 					const userExists = users.some(user => user.email === email);
 					if (userExists) {
-						throw new Error("Email already exists");
+						return { exists: true };
 					}
 
 					const resp = await fetch(process.env.BACKEND_URL + "/api/users", {
@@ -68,12 +68,16 @@ const getState = ({ getStore, getActions, setStore }) => {
 						body: JSON.stringify({ email })
 					});
 					if (!resp.ok) {
+						const data = await resp.json();
+						if (data.exists) {
+							return { exists: true };
+						}
 						throw new Error("Network response was not ok");
 					}
 					const data = await resp.json();
 					// Optionally, fetch the updated list of users after adding a new one
 					getActions().getUsers();
-					return data;
+					return { exists: false };
 				} catch (error) {
 					console.log("Error adding user to backend", error);
 				}
