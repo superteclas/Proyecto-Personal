@@ -30,22 +30,17 @@ def get_users():
 
 @api.route('/users', methods=['POST'])
 def create_user():
-    # Agregar un nuevo usuario desde los datos proporcionados en el request
-    email = request.json.get('email')  # Asumiendo que el email se envía en formato JSON
+    email = request.json.get('email')
 
     if not email:
         return jsonify({'error': 'Email es requerido'}), 400
     
-    # Verificar si el usuario ya existe
     existing_user = User.query.filter_by(email=email).first()
-    if (existing_user):
-        return jsonify({'error': 'El usuario ya existe'}), 400
-    
-    # Crear un nuevo usuario
+    if existing_user:
+        return jsonify({'error': 'El usuario ya existe', 'exists': True}), 400
+
     new_user = User(email=email)
-    
-    # Guardar el nuevo usuario en la base de datos
     db.session.add(new_user)
     db.session.commit()
-    
-    return jsonify({'message': 'Usuario creado exitosamente'}), 201
+
+    return jsonify({'message': 'Usuario creado exitosamente', 'exists': False}), 201

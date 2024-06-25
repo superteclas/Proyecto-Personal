@@ -52,7 +52,15 @@ const getState = ({ getStore, getActions, setStore }) => {
 
 			addUser: async (email) => {
 				try {
-					const resp = await fetch(process.env.BACKEND_URL + "api/users", {
+					const { users } = getStore();
+					
+					// Check if the email already exists
+					const userExists = users.some(user => user.email === email);
+					if (userExists) {
+						throw new Error("Email already exists");
+					}
+
+					const resp = await fetch(process.env.BACKEND_URL + "/api/users", {
 						method: "POST",
 						headers: {
 							"Content-Type": "application/json"
