@@ -54,7 +54,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 				try {
 					const { users } = getStore();
 					
-					// Check if the email already exists
+					// COMPROBACIÓN DE QUE EXISTE EMAIL EN EL BACK
 					const userExists = users.some(user => user.email === email);
 					if (userExists) {
 						return { exists: true };
