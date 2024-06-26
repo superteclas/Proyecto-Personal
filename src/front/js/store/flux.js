@@ -79,7 +79,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					getActions().getUsers();
 					return { exists: false };
 				} catch (error) {
-					console.log("Error adding user to backend", error);
+					console.log("Error adding user to backssend", error);
 				}
 			},
 
