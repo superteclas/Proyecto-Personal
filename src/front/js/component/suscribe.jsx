@@ -19,7 +19,7 @@ const Subscribe = () => {
             } else {
                 Swal.fire({
                     icon: 'success',
-                    title: 'Éxito!',
+                    title: 'Genial!',
                     text: 'Email enviado exitosamente!',
                 });
             }

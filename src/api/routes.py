@@ -33,7 +33,7 @@ def create_user():
     email = request.json.get('email')
 
     if not email:
-        return jsonify({'error': 'Email es requerido'}), 400
+        return jsonify({'error': ' El email es requerido'}), 400
     
     existing_user = User.query.filter_by(email=email).first()
     if existing_user:
