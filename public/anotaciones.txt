@@ -7,7 +7,16 @@ npm install
 npm install react-slick slick-carousel
 npx create-next-app@latest --typescript --tailwind --eslint
 npm install next/link
+-----------------------------------------------------
 npm install react-scroll-parallax
+
+
+
+---------
+INICIAR 
+pipenv install
+------------------
+npm run start
 
 
 
@@ -16,18 +25,7 @@ https://stunning-space-winner-v6v4rqj49g5rc965-3001.app.github.dev/api/users
 
 
 
----------
-INICIAR 
-pipenv install
-npm run start
 
 
 
-@api.route('/hello', methods=['POST', 'GET'])
-def handle_hello():
 
-    response_body = {
-        "message": "EL BACKEND FUNCIONA"
-    }
-
-    return jsonify(response_body), 200

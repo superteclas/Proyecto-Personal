@@ -1,10 +1,4 @@
-
-body, html {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    overflow-x: hidden;
-}
+/* home.css */
 
 .fixed-background {
     position: fixed;
@@ -17,11 +11,6 @@ body, html {
     z-index: -1;
 }
 
-.content {
-    position: relative;
-    z-index: 1;
-}
-
 .parallax-container {
     position: relative;
     width: 100%;
@@ -31,9 +20,10 @@ body, html {
 
 .parallax-layer {
     position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
 }
