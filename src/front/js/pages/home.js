@@ -26,7 +26,7 @@ export const Home = () => {
                         <div style={{ backgroundImage: `url(${imageBg})` }} className="parallax-layer" />
                     </Parallax>
                     <div className="content">
-                        <h1>aquí iria presentacion</h1>
+                        <h1>Álvaro Ponce</h1>
                     <div className="alert alert-info">
                     {store.message || "Loading message from the backend (make sure your python backend is running)..."}
                 </div>
@@ -34,32 +34,24 @@ export const Home = () => {
                 </div>
 
                 <div className="content-section">
-                    <Parallax speed={-10} className="parallax-layer">
+                    <Parallax speed={-20} className="parallax-layer">
                         <div style={{ backgroundImage: `url(${imageFar})` }} className="parallax-layer" />
                     </Parallax>
                     <div className="content">
-                        <h1>aquí iria un texto mas detallado</h1>
+                        <h1>Descripción y bienvenida</h1>
                     </div>
                 </div>
 
                 <div className="content-section">
-                    <Parallax speed={0} className="parallax-layer">
+                    <Parallax speed={-10} className="parallax-layer">
                         <div style={{ backgroundImage: `url(${imageMid})` }} className="parallax-layer" />
                     </Parallax>
                     <div className="content">
                         <h1>aqui iria suscribirse</h1>
+                        <SubscriptionForm />
                     </div>
                 </div>
-
-                <div className="content-section">
-                    <Parallax speed={10} className="parallax-layer">
-                        <div style={{ backgroundImage: `url(${imageClose})` }} className="parallax-layer" />
-                    </Parallax>
-                    <div className="content">
-                        <h2>Sección 4</h2>
-                        <p>Contenido de la sección 4...</p>
-                    </div>
-                </div>
+               
                 <div>
                     <h3>Empresas para las que he trabajado:{" "}</h3>
                     <LogoCarousel />

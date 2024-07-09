@@ -29,11 +29,11 @@ const Subscribe = () => {
 
     return (
         <div className="titulo_subs">
-            <h1>HOLAAAA</h1>
+            
             <div className="subscribe">
-                <p>SUBSCRIBE</p>
+                <p>Subscríbete</p>
                 <input 
-                    placeholder="Your e-mail" 
+                    placeholder="Introduce email" 
                     className="subscribe-input" 
                     name="email" 
                     type="email"
