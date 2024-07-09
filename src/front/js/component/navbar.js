@@ -5,10 +5,10 @@ import "../../styles/navbar.css";
 
 export const Navbar = () => {
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-light">
+    <nav className="navbar navbar-expand-lg">
       <div className="container">
         <Link to="/" className="navbar-brand">
-          <img src={logo} alt="Logo" style={{ maxHeight: "60px" }} /> 
+          <img src={logo} alt="Logo" className="navbar-logo" /> 
         </Link>
         <button
           className="navbar-toggler"
@@ -21,8 +21,8 @@ export const Navbar = () => {
         >
           <span className="navbar-toggler-icon"></span>
         </button>
-        <div className="collapse navbar-collapse justify-content-center" id="navbarNav">
-          <ul className="navbar-nav">
+        <div className="collapse navbar-collapse" id="navbarNav">
+          <ul className="navbar-nav mr-auto">
             <li className="nav-item">
               <Link to="/bio" className="nav-link">
                 Bio
@@ -38,6 +38,8 @@ export const Navbar = () => {
                 Agenda
               </Link>
             </li>
+          </ul>
+          <ul className="navbar-nav ml-auto">
             <li className="nav-item">
               <Link to="/contact" className="nav-link">
                 Contacto
@@ -45,10 +47,7 @@ export const Navbar = () => {
             </li>
           </ul>
         </div>
-        
       </div>
     </nav>
   );
 };
-
-
