@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import logo from "../../img/alvaroponce.png";
 import "../../styles/navbar.css";
 
@@ -7,9 +7,9 @@ export const Navbar = () => {
   return (
     <nav className="navbar navbar-expand-lg">
       <div className="container">
-        <Link to="/" className="navbar-brand">
+        <NavLink to="/" className="navbar-brand">
           <img src={logo} alt="Logo" className="navbar-logo" /> 
-        </Link>
+        </NavLink>
         <button
           className="navbar-toggler"
           type="button"
@@ -24,26 +24,26 @@ export const Navbar = () => {
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav mr-auto">
             <li className="nav-item">
-              <Link to="/bio" className="nav-link">
+              <NavLink to="/bio" className="nav-link" activeClassName="active">
                 Bio
-              </Link>
+              </NavLink>
             </li>
             <li className="nav-item">
-              <Link to="/services" className="nav-link">
+              <NavLink to="/services" className="nav-link" activeClassName="active">
                 Servicios
-              </Link>
+              </NavLink>
             </li>
             <li className="nav-item">
-              <Link to="/agenda" className="nav-link">
+              <NavLink to="/agenda" className="nav-link" activeClassName="active">
                 Agenda
-              </Link>
+              </NavLink>
             </li>
           </ul>
-          <ul className="navbar-nav ml-auto">
+          <ul className="navbar-nav">
             <li className="nav-item">
-              <Link to="/contact" className="nav-link">
+              <NavLink to="/contact" className="nav-link " activeClassName="active">
                 Contacto
-              </Link>
+              </NavLink>
             </li>
           </ul>
         </div>

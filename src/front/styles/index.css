@@ -1,6 +1,9 @@
 /* 
     General Styles used on every website (Don't Repeat Yourself)
 */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
 body {
     background-color: #343434;
     color: #e0e0e0;
@@ -21,7 +24,7 @@ a:hover {
 
 h1, h2, h3, h4, h5, h6 {
     color: #f0f0f0;
-    font-family: 'Times New Roman', serif;
+    
 }
 
 p {

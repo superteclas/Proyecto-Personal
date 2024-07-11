@@ -16,14 +16,19 @@
 }
 
 .nav-link {
-    color: #e0e0e0;
-    font-size: 16px;
+    color: #000000; /* Color negro para los enlaces no seleccionados */
+    font-size: 25px;
     padding: 10px 15px;
     text-transform: uppercase;
 }
 
+.nav-link.active {
+    color: #ffffff; /* Color blanco para el enlace activo */
+    background-color: transparent; /* Opcional, por si deseas remover cualquier fondo por defecto */
+}
+
 .nav-link:hover {
-    color: #ffffff;
+    color: #ffffff; /* Color blanco al pasar el ratón sobre el enlace */
 }
 
 .navbar-toggler {
@@ -37,4 +42,9 @@
 .nav-item {
     display: flex;
     align-items: center;
+}
+
+.navbar-nav {
+
+    margin-left: 15em;
 }
