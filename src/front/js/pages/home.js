@@ -7,7 +7,7 @@ import LogoCarousel from "../component/carrusel.jsx";
 import SubscriptionForm from "../component/suscribe.jsx";
 import imageBg from "../../img/piano1.png";
 import imageClose from "../../img/piano1.png";
-import imageMid from "../../img/piano1.png";
+import imageMid from "../../img/TECLADOS 3.jpg";
 import imageFar from "../../img/piano1.png";
 
 export const Home = () => {
@@ -22,7 +22,7 @@ export const Home = () => {
 
             <div ref={target} className="parallax-container">
                 <div className="content-section">
-                    <Parallax speed={-20} className="parallax-layer">
+                    <Parallax speed={-5} className="parallax-layer">
                         <div style={{ backgroundImage: `url(${imageBg})` }} className="parallax-layer" />
                     </Parallax>
                     <div className="content">
@@ -35,7 +35,7 @@ export const Home = () => {
 
                 <div className="content-section">
                     <Parallax speed={-20} className="parallax-layer">
-                        <div style={{ backgroundImage: `url(${imageFar})` }} className="parallax-layer" />
+                        <div style={{ backgroundImage: `url(${imageMid})` }} className="parallax-layer" />
                     </Parallax>
                     <div className="content">
                         <h1>Descripción y bienvenida</h1>
@@ -43,8 +43,8 @@ export const Home = () => {
                 </div>
 
                 <div className="content-section">
-                    <Parallax speed={-10} className="parallax-layer">
-                        <div style={{ backgroundImage: `url(${imageMid})` }} className="parallax-layer" />
+                    <Parallax speed={-25} className="parallax-layer">
+                        <div style={{ backgroundImage: `url(${imageFar})` }} className="parallax-layer" />
                     </Parallax>
                     <div className="content">
                         <h1>aqui iria suscribirse</h1>
